@@ -1,22 +1,36 @@
-import React from 'react'
-import { HeaderContainer, HeaderWrap,  NavWrap, UserContainer, Wrapper } from './Header.styled';
-// import Navigation from '../Navigation/Navagation';
+import React from 'react';
+import { 
+
+  Logo,
+  NavbarContainer,
+  NavItem,
+  NavList,
+  StyledNavLink
+} from './Header.styled';
 
 
 const Header: React.FC = () => {
   return (
-    <div>  <Wrapper >
-    <HeaderContainer>
-      <HeaderWrap>
-          <UserContainer>
-            <NavWrap>
-              {/* <Navigation /> */}
-            </NavWrap>
-          </UserContainer>
-        </HeaderWrap>
-      </HeaderContainer>
-    </Wrapper>
-    </div>
+    <NavbarContainer>
+      <Logo to="/">GoldBuy</Logo>
+      <NavList>
+        <NavItem>
+          <StyledNavLink to="/home">Home</StyledNavLink>
+        </NavItem>
+        <NavItem>
+          <StyledNavLink to="/details">Details</StyledNavLink>
+        </NavItem>
+        <NavItem>
+          <StyledNavLink to="/about">About</StyledNavLink>
+        </NavItem>
+        <NavItem>
+          <StyledNavLink to="/partners">Partners</StyledNavLink>
+        </NavItem>
+        <NavItem>
+          <StyledNavLink to="/contact">Contact</StyledNavLink>
+        </NavItem>
+      </NavList>
+    </NavbarContainer>
   )
 }
 

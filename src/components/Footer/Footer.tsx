@@ -1,8 +1,11 @@
 import React from 'react'
+import { FooterContainer, FooterText } from './Footer.styled'
 
 const Footer: React.FC = () => {
   return (
-    <div>Footer</div>
+    <FooterContainer>
+      <FooterText>© 2024 GoldBuy. All rights reserved.</FooterText>
+    </FooterContainer>
   )
 }
 

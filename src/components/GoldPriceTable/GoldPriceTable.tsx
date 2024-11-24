@@ -1,38 +1,39 @@
 import React from 'react';
+import {
+  Table,
+  TableRow,
+  TableHeader,
+  TableCell,
+} from './GoldPriceTable.styled';
+import { metalPrices } from './goldPrices';
 
-interface PriceData {
-  metal: string;
-  karat: string;
-  price: number;
-}
-
-const GoldPriceTable: React.FC = () => {
-  const prices: PriceData[] = [
-    { metal: 'Gold', karat: '585', price: 1800 },
-    { metal: 'Gold', karat: '750', price: 2200 },
-    { metal: 'Silver', karat: '925', price: 25 },
-  ];
-
+const PriceTable: React.FC = () => {
   return (
-    <table>
+    <Table>
       <thead>
-        <tr>
-          <th>Metal</th>
-          <th>Karat</th>
-          <th>Price (🇪🇺)</th>
-        </tr>
+        <TableRow>
+          <TableHeader>Metal</TableHeader>
+          <TableHeader>Karat</TableHeader>
+          <TableHeader>Type</TableHeader>
+
+          <TableHeader>Price</TableHeader>
+          {/* <TableHeader>Price</TableHeader> */}
+        </TableRow>
       </thead>
       <tbody>
-        {prices.map((price, index) => (
-          <tr key={index}>
-            <td>{price.metal}</td>
-            <td>{price.karat}</td>
-            <td>{price.price} 🇪🇺</td>
-          </tr>
+        {metalPrices.map((item, index) => (
+          <TableRow key={index}>
+            <TableCell>{item.metal}</TableCell>
+
+            <TableCell>{item.karat}</TableCell>
+            <TableCell>{item.type}</TableCell>
+
+            <TableCell>{item.price}</TableCell>
+          </TableRow>
         ))}
       </tbody>
-    </table>
+    </Table>
   );
 };
 
-export default GoldPriceTable;
+export default PriceTable;

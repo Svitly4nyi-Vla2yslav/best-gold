@@ -1,87 +1,152 @@
-import { createGlobalStyle } from "styled-components";
+import { css } from '@emotion/react';
 import 'modern-normalize';
+import Grotesk from "./assets/fonts/RightGrotesk-CompactBlack.ttf"
+import BiroScript from "./assets/fonts/BiroScriptPlus-Bold.ttf"
+import Messina from "./assets/fonts/MessinaSansMono-Black.ttf"
+import Formular from "./assets/fonts/Formular-Medium.ttf"
+import Roboto from "./assets/fonts/Roboto-Regular.ttf"
+import Proxima from "./assets/fonts/d9fe41ee-4904-4a11-ba11-b61cd3be767f.woff2"
 
-export const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = css`
 
+:root {
+  --font-family: "Right Grotesk", sans-serif;
+  --second-family: "Messina Sans Mono", sans-serif;
+  --third-family: "Biro Script Plus", sans-serif;
+  --font3: "Formular", sans-serif;
+  --font4: "Roboto", sans-serif;
+  --textColorWhite: #fff;
+}
+@font-face {
+  font-family: 'Roboto';
+  // src: url(${Roboto}) format('truetype');
+}
+  @font-face {
+  font-family: 'Proxima';
+  // src: url(${Proxima}) format('truetype');
+}
+
+@font-face {
+  font-family: 'Right Grotesk';
+  src: url(${Grotesk}) format('truetype');
+}
+
+@font-face {
+  font-family: 'Messina Sans Mono';
+  src: url(${Messina}) format('truetype');
+}
+
+@font-face {
+  font-family: 'Biro Script Plus';
+  src: url(${BiroScript}) format('truetype');
+}
+
+@font-face {
+  font-family: 'Formular';
+  src: url(${Formular}) format('truetype');
+}
+
+@keyframes move {
+  from {
+    tranform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+  
   * {
-    padding: 0;
     margin: 0;
-    border: 0;
-    
+    padding: 0;
+    box-sizing: border-box;
+    --v1: calc(max(9vw, 11vh));
+    scrollbar-width: none;
   }
-
   body {
-    font-family: 'Inter', sans-serif;
-    color: ${({ theme }) => theme.primaryBlack};
-    background-color: #f9f7f7;
-    height: 100%;
-    width: 100%;
-    font-size: 100%;
-    line-height: 1;
-    -ms-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    // background: linear-gradient(to top left,  ${({ theme }) => theme.primaryYellow}, rgba(25, 26, 21, 0) 35%);
-    min-height: 100vh;
-    background-color: #f8f8f899;
-  }
-
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-size: inherit;
-    font-weight: 400;
-  }
-
-  ul li {
-    list-style: none;
-  }
-
-  img {
-    display: block;
-    max-width: 100%;
-    object-fit: cover;
-  }
-
-  a {
-    text-decoration: none;
-    &:hover {
-      color: rgb(0, 250, 225);
-    }
-    &:visited {
-      text-decoration: none;
-    }
+ font-family: 'Roboto', sans-serif;
+  background-color: #01283c;
+  background-size: auto 100%;
+  background-position: center center;
+  background-repeat: cover;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #111111;
+  width: 100%;
+  margin: 0;
+  transition-duration: 300ms;
+  overflow: hidden;
   }
 
   button {
     cursor: pointer;
+    transition-duration: 300ms;
+  }
+  button:focus,
+  button:hover {
+    // background-color: lightgray; 
+    // box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.6); 
   }
 
-  *, *:before, *:after {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  a {
+    cursor: pointer;
+    transition-duration: 300ms;
+    text-decoration: none;
+    color: #FFFFFF;
+  }
+ 
+
+  img {
+    cursor: pointer;
+    transition-duration: 300ms;
   }
 
-  nav, footer, header {
-    display: block;
-  }
 
-  input, button, textarea {
-    font-family: inherit;
-  }
 
-  input::-ms-clear {
-    display: none;
-  }
-
-  button::-moz-focus-inner {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+ {
+  font-family: 'Messina Sans Mono';
+    margin: 0;
     padding: 0;
-    border: 0;
   }
+
+  ul,
+  li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+   
+    }
+
+    @keyframes move {
+  from {
+    tranform: translateY(0%);
+  }
+
+  to {
+    transform: translateY(-100%);
+  }
+}
+ 
+
+
+
 `;

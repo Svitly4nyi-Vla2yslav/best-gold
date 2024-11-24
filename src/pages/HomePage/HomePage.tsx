@@ -1,22 +1,28 @@
+import Banner from '../../components/Banner/Banner';
+import { BannerText } from '../../components/Banner/Banner.styled';
 import CitySelector from '../../components/CitySelector/CitySelector';
-import Footer from '../../components/Footer/Footer';
 import GoldPriceTable from '../../components/GoldPriceTable/GoldPriceTable';
-import Header from '../../components/Header/Header';
+import InteractiveMap from '../../components/InteractiveMap/InteractiveMap';
 import MetalChart from '../../components/MetalChart/MetalChart';
-import { HomeContainer } from './HomePage.styled';
+import { HomeContainer, MainWrapper, MapWrapper, TableContainer } from './HomePage.styled';
 
 const Home: React.FC = () => {
   return (
     <HomeContainer>
-      <Header />
       <main>
-        <CitySelector onCityChange={function (): void {
-          throw new Error('Function not implemented.');
-        } } />
-        <GoldPriceTable />
-        <MetalChart />
+        <Banner />
+        <MainWrapper>
+          <TableContainer>
+            <CitySelector />
+            <GoldPriceTable />
+          </TableContainer>
+          <MapWrapper>
+            <BannerText>Our Gold and Silver Buyback Locations</BannerText>
+            <InteractiveMap />
+            <MetalChart />
+          </MapWrapper>
+        </MainWrapper>
       </main>
-      <Footer />
     </HomeContainer>
   );
 };
