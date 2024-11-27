@@ -14,7 +14,10 @@ const ContactForm: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await fetch('/.netlify/functions/send', {
+      const response = await fetch(
+        process.env.NODE_ENV === 'development'
+          ? 'http://localhost:8888/.netlify/functions/send'
+          : '/.netlify/functions/send', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
