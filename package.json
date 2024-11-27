@@ -1,6 +1,6 @@
 {
-  "name": "psychologists-services",
-  "homepage": "https://psychologist-services.netlify.app/",
+  "name": "best-gold",
+  "homepage": "https://change-cold.netlify.app/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -29,6 +29,7 @@
     "formik": "^2.4.5",
     "leaflet": "^1.9.4",
     "modern-normalize": "^2.0.0",
+    "nodemailer": "^6.9.16",
     "normalize.css": "^8.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
