@@ -10,7 +10,7 @@ import 'leaflet/dist/leaflet.css';
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <Global styles={GlobalStyle} />
-    <BrowserRouter basename="/change-cold.netlify.app/">
+    <BrowserRouter basename="/">
       <App />
     </BrowserRouter>
   </React.StrictMode>,
