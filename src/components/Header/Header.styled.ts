@@ -16,8 +16,12 @@ export const NavbarContainer = styled.header`
 export const Logo = styled(NavLink)`
   font-size: 1.5rem;
   font-weight: bold;
-  color: #00d1ff;
+  color: #ffcc00;
   text-decoration: none;
+   &:hover {
+    color: silver;
+    transform: scale(1.1);
+  }
 `;
 
 export const NavList = styled.ul`
@@ -31,13 +35,13 @@ export const NavList = styled.ul`
 export const NavItem = styled.li`
   a {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.8);
+    color: gold;
     font-size: 1rem;
     transition: color 0.3s ease;
 
     &:hover,
     &.active {
-      color: #00d1ff;
+      color: silver;
     }
   }
 `;
@@ -51,7 +55,7 @@ export const StyledNavLink = styled(NavLink)`
   position: relative;
   
   &:hover {
-    color: #00d1ff;
+    color: silver;
     transform: scale(1.1);
   }
 
@@ -62,12 +66,12 @@ export const StyledNavLink = styled(NavLink)`
     bottom: -4px;
     width: 0;
     height: 2px;
-    background-color: #00d1ff;
+    background-color: silver;
     transition: width 0.3s ease-in-out;
   }
 
   &.active {
-    color: #00d1ff;
+    color: silver;
     &::after {
       width: 100%;
     }

@@ -7,17 +7,22 @@ export const HomeContainer = styled.div`
 
 `;
 export const MainWrapper = styled.div`
+display: block;
+@media (min-width: 1024px){
 display: flex;
-  
+  }
 `;
 
 export const TableContainer = styled.div`
+
+@media (min-width: 1024px){
 display: flex;
     width: 45%;
     flex-direction: column;
     align-items: baseline;
     align-content: flex-start;
     flex-wrap: wrap;
+    }
 `;
 
 export const MapWrapper = styled.div`

@@ -93,7 +93,8 @@ export const GlobalStyle = css`
     cursor: pointer;
     transition-duration: 300ms;
     text-decoration: none;
-    color: #FFFFFF;
+     color: #00d1ff;
+
   }
  
 
