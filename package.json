@@ -26,6 +26,7 @@
     "antd": "^5.16.4",
     "dotenv": "^16.4.5",
     "firebase": "^10.11.0",
+    "formidable": "^3.5.2",
     "formik": "^2.4.5",
     "leaflet": "^1.9.4",
     "modern-normalize": "^2.0.0",
