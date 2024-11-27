@@ -7,14 +7,14 @@ const ContactForm: React.FC = () => {
     message: '',
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/send', {
+      const response = await fetch('/.netlify/functions/send', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

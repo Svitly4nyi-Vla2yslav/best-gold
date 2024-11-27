@@ -1,10 +1,7 @@
-import express from 'express';
 import nodemailer from 'nodemailer';
 
-const router = express.Router();
-
-router.post('/', async (req, res) => {
-  const { name, email, message } = req.body;
+export const handler = async (event) => {
+  const { name, email, message } = JSON.parse(event.body);
 
   const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -23,11 +20,15 @@ router.post('/', async (req, res) => {
 
   try {
     await transporter.sendMail(mailOptions);
-    res.status(200).json({ success: true, message: 'Лист успішно надіслано' });
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ success: true, message: 'Лист успішно надіслано' }),
+    };
   } catch (error) {
     console.error('Помилка при надсиланні:', error);
-    res.status(500).json({ success: false, message: 'Помилка при надсиланні' });
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ success: false, message: 'Помилка при надсиланні' }),
+    };
   }
-});
-
-export default router;
+};
