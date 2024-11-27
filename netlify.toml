@@ -2,5 +2,5 @@
   command = "npm run build"
   publish = "dist" # Шлях до вашої збірки React (Vite)
 
-[[functions]]
+[functions]
   directory = "netlify/functions" # Шлях до серверless-функцій
