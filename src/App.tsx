@@ -19,6 +19,7 @@ export const App: React.FC = () => {
           <Route path="partners" element={<Partners />} />
           <Route path="contact" element={<Contact />} />
         </Route>
+        <Route path="*" element={<HomePage />} />
       </Routes>
     </Container>
   );
