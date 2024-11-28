@@ -8,18 +8,24 @@ const ContactForm: React.FC = () => {
     files: [] as File[], // Додаємо поле для файлів
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
 
-    if (e.target.name === 'files' && e.target instanceof HTMLInputElement && e.target.files) {
+    if (
+      e.target.name === 'files' &&
+      e.target instanceof HTMLInputElement &&
+      e.target.files
+    ) {
       // Перевірка типу елемента input
       const files = Array.from(e.target.files); // Перетворюємо FileList в масив
-      setFormData((prev) => ({
+      setFormData(prev => ({
         ...prev,
         files: files,
       }));
     } else {
-      setFormData((prev) => ({
+      setFormData(prev => ({
         ...prev,
         [name]: value,
       }));
@@ -34,18 +40,17 @@ const ContactForm: React.FC = () => {
     form.append('message', formData.message);
 
     // Додаємо файли до форми
-    formData.files.forEach((file) => {
+    formData.files.forEach(file => {
       form.append('files', file);
     });
 
     try {
-      const response = await fetch(
-        process.env.NODE_ENV === 'development'
-          ? 'http://localhost:8888/.netlify/functions/send'
-          : '/.netlify/functions/send', {
-        method: 'POST',
-        body: form, // Відправляємо форму з файлами
-      });
+      const response = await fetch('http://localhost:8888/.netlify/functions/send',
+        {
+          method: 'POST',
+          body: form, // Відправляємо форму з файлами
+        }
+      );
 
       const data = await response.json();
       if (data.success) {
@@ -83,14 +88,9 @@ const ContactForm: React.FC = () => {
         onChange={handleChange}
         required
       ></textarea>
-      
+
       {/* Поле для завантаження файлів */}
-      <input
-        type="file"
-        name="files"
-        multiple
-        onChange={handleChange}
-      />
+      <input type="file" name="files" multiple onChange={handleChange} />
 
       <button type="submit">Надіслати</button>
     </form>
