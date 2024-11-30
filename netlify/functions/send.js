@@ -1,5 +1,7 @@
 import nodemailer from 'nodemailer';
-const cors = require('cors');
+import cors from 'cors';
+
+// const cors = require('cors');
 app.use(cors());
 
 
