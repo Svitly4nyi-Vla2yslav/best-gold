@@ -1,7 +1,6 @@
 [build]
-  command = "npm run build"
-  publish = "dist" 
-  node_bundler = "esbuild"
+  command = "npm install && npm run build"
+  publish = "dist"
 
 [functions]
   directory = "netlify/functions"
@@ -15,8 +14,3 @@
   framework = "vite"
   functions = "netlify/functions"
 
-[context.production.environment]
-  NODE_ENV = "production"
-  EMAIL_USER = "svetli4nuyvla2islav@gmail.com"   # заміни на свій email
-  EMAIL_PASS = "qzdzgtoutdqkevcc"   # заміни на свій пароль або краще використовуйте змінні середовища для безпеки
-  EMAIL_RECEIVER = "svetli4nuyvla2islav@gmail.com"  # адреса отримувача
