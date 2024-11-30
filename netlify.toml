@@ -3,7 +3,7 @@
   publish = "dist" 
 
 [functions]
-  directory = "netlify/functions" 
+  directory = "netlify/functions"
 
 [[redirects]]
   from = "/*"
@@ -11,5 +11,5 @@
   status = 200
 
 [dev]
-functions = "netlify/functions"
-targetPort = 8888
+  framework = "vite"
+  functions = "netlify/functions"

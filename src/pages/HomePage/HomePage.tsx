@@ -1,6 +1,7 @@
 import Banner from '../../components/Banner/Banner';
 import { BannerText } from '../../components/Banner/Banner.styled';
 import CitySelector from '../../components/CitySelector/CitySelector';
+// import ContactForm from '../../components/ContactForm/ContactForm';
 import GoldPriceTable from '../../components/GoldPriceTable/GoldPriceTable';
 import InteractiveMap from '../../components/InteractiveMap/InteractiveMap';
 import MetalChart from '../../components/MetalChart/MetalChart';
@@ -16,6 +17,7 @@ const Home: React.FC = () => {
     <HomeContainer>
       <main>
         <Banner />
+        {/* <ContactForm/> */}
         <MainWrapper>
           <TableContainer>
             <CitySelector />

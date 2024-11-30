@@ -5,61 +5,40 @@ const ContactForm: React.FC = () => {
     name: '',
     email: '',
     message: '',
-    files: [] as File[], // Додаємо поле для файлів
   });
+
+  const API_URL = import.meta.env.VITE_API_URL || '/.netlify/functions/send';
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    const { name, value } = e.target;
-
-    if (
-      e.target.name === 'files' &&
-      e.target instanceof HTMLInputElement &&
-      e.target.files
-    ) {
-      // Перевірка типу елемента input
-      const files = Array.from(e.target.files); // Перетворюємо FileList в масив
-      setFormData(prev => ({
-        ...prev,
-        files: files,
-      }));
-    } else {
-      setFormData(prev => ({
-        ...prev,
-        [name]: value,
-      }));
-    }
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const form = new FormData(); // Використовуємо FormData для відправки файлів
-    form.append('name', formData.name);
-    form.append('email', formData.email);
-    form.append('message', formData.message);
-
-    // Додаємо файли до форми
-    formData.files.forEach(file => {
-      form.append('files', file);
-    });
-
+    if (!formData.name || !formData.email || !formData.message) {
+      alert('Будь ласка, заповніть всі поля.');
+      return;
+    }
     try {
-      const response = await fetch('http://localhost:8888/.netlify/functions/send',
-        {
-          method: 'POST',
-          body: form, // Відправляємо форму з файлами
-        }
-      );
+      const response = await fetch(API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
 
+      if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
       const data = await response.json();
+
       if (data.success) {
         alert('Лист успішно надіслано!');
       } else {
-        alert('Сталася помилка. Спробуйте знову.');
+        alert(`Помилка: ${data.message}`);
       }
-    } catch (error) {
-      console.error('Помилка:', error);
+    } catch (error: any) {
+      console.error('Помилка:', error.message || error);
+      alert('Не вдалося надіслати лист. Перевірте підключення або спробуйте пізніше.');
     }
   };
 
@@ -88,10 +67,6 @@ const ContactForm: React.FC = () => {
         onChange={handleChange}
         required
       ></textarea>
-
-      {/* Поле для завантаження файлів */}
-      <input type="file" name="files" multiple onChange={handleChange} />
-
       <button type="submit">Надіслати</button>
     </form>
   );
