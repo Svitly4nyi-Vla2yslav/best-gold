@@ -5,7 +5,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/.netlify/functions': {
-        target: 'http://localhost:49693',
+        target: 'http://localhost:50583',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/\.netlify\/functions/, ''),
       },
