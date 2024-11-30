@@ -6,7 +6,7 @@ const ContactForm: React.FC = () => {
     email: '',
     message: '',
   });
-
+ 
   const API_URL = import.meta.env.VITE_API_URL || '/.netlify/functions/send';
 
   const handleChange = (
@@ -43,7 +43,7 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} netlify>
+    <form onSubmit={handleSubmit}   data-netlify="true">
       <input
         type="text"
         name="name"
