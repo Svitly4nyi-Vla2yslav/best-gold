@@ -1,0 +1,58 @@
+{
+  "forms": [
+    {
+      "name": "customer_evaluation",
+      "action": "https://formspree.io/f/maykroar",
+      "method": "POST",
+      "fields": [
+        {
+          "name": "metal",
+          "type": "select"
+        },
+        {
+          "name": "weight",
+          "type": "text"
+        },
+        {
+          "name": "name",
+          "type": "text"
+        },
+        {
+          "name": "email",
+          "type": "email"
+        },
+        {
+          "name": "phone",
+          "type": "tel"
+        },
+        {
+          "name": "notes",
+          "type": "textarea"
+        },
+        {
+          "name": "file",
+          "type": "file"
+        }
+      ]
+    },
+    {
+      "name": "partner_registration",
+      "action": "https://formspree.io/f/maykroar",
+      "method": "POST",
+      "fields": [
+        {
+          "name": "name",
+          "type": "text"
+        },
+        {
+          "name": "email",
+          "type": "email"
+        },
+        {
+          "name": "phone",
+          "type": "tel"
+        }
+      ]
+    }
+  ]
+}

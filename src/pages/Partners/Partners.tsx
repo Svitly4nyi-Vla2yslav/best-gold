@@ -1,11 +1,11 @@
 import React from 'react'
-import ContactForm from '../../components/ContactForm/ContactForm';
+import PartnerForm from '../../components/ContactForm/PartnerForm';
 
 const Partners: React.FC = () => {
   return (
     <>
    <main>
-    <ContactForm/>
+    <PartnerForm/>
     <div>Блок з інформацією про партнерську модель.</div>
    </main>
     </>
