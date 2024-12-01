@@ -3,7 +3,7 @@
   publish = "dist"
 
 [[plugins]]
-  package = "@netlify/plugin-forms"
+package = "netlify-plugin-formspree"
 
 [[redirects]]
   from = "/*"

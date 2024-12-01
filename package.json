@@ -56,6 +56,7 @@
     "yup": "^1.4.0"
   },
   "devDependencies": {
+    "@netlify/plugin-emails": "^1.1.1",
     "@svgr/webpack": "^8.1.0",
     "@swc/cli": "^0.1.62",
     "@swc/core": "^1.3.84",
@@ -71,6 +72,7 @@
     "eslint-plugin-react-refresh": "^0.4.3",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
+    "netlify-plugin-formspree": "^1.0.1",
     "prettier": "3.0.3",
     "typescript": "^5.7.2",
     "vite": "^4.4.5"
