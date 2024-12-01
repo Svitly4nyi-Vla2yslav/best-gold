@@ -8,19 +8,26 @@ import {
 } from './Header.styled';
 import { useMediaQuery } from 'react-responsive';
 import { MobileMenu } from '../MobileMenu/MobileMenu';
+import 'animate.css';
+import { Fade } from 'react-awesome-reveal';
 
 const Header: React.FC = () => {
   const isMobile = useMediaQuery({ query: '(max-width: 549px)' });
 
   return (
     <NavbarContainer>
-      <Logo to="/">GoldBuy</Logo>
+      <Logo
+        to="/"
+        className="animate__delay-1s animate__animated animate__fadeInDown"
+      >
+        GoldBuy
+      </Logo>
       <NavList>
         {isMobile ? (
           <MobileMenu />
         ) : (
-          <>
-            <NavItem>
+          <><Fade direction='down' cascade>
+            <NavItem >
               <StyledNavLink to="/home">Home</StyledNavLink>
             </NavItem>
             <NavItem>
@@ -34,7 +41,7 @@ const Header: React.FC = () => {
             </NavItem>
             <NavItem>
               <StyledNavLink to="/contact">Contact</StyledNavLink>
-            </NavItem>
+            </NavItem></Fade>
           </>
         )}
       </NavList>
