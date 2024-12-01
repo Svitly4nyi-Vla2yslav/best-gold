@@ -2,8 +2,8 @@
   command = "npm install && npm run build"
   publish = "dist"
 
-[functions]
-  directory = "netlify/functions"
+[[plugins]]
+  package = "@netlify/plugin-forms"
 
 [[redirects]]
   from = "/*"
