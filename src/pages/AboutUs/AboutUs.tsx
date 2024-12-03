@@ -1,10 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import InteractiveMap from '../../components/InteractiveMap/InteractiveMap';
-import { useForm } from '@formspree/react';
-import { Message } from '../../components/ContactForm/ContactForm.styled';
-// import { MapComponent } from './MapComponent';
-// import { ContactForm } from './ContactForm';
+import Feedback from '../../components/ContactForm/Feedback';
 
 const AboutUsContainer = styled.div`
   padding: 20px;
@@ -51,56 +48,7 @@ const CertificateGallery = styled.div`
   gap: 15px;
 `;
 
-const CertificateImage = styled.img`
-  width: 200px;
-  height: auto;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-`;
-
-const FeedbackForm = styled.form`
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-`;
-
-const Input = styled.input`
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-`;
-
-const Textarea = styled.textarea`
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-`;
-
-const SubmitButton = styled.button`
-  background-color: #e67e22;
-  color: white;
-  border: none;
-  padding: 10px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-
-  &:hover {
-    background-color: #d35400;
-  }
-`;
-
 const AboutUs: React.FC = () => {
-  const [state, handleSubmit] = useForm('meoqvyrl');
-  if (state.succeeded) {
-    return (
-      <Message success={state.succeeded ? 'true' : 'false'}>
-        Merci pour votre retour.
-      </Message>
-    );
-  }
   return (
     <AboutUsContainer>
       <Section className="intro">
@@ -176,14 +124,14 @@ const AboutUs: React.FC = () => {
           réception de l'or.
         </Paragraph>
         <CertificateGallery>
-          <CertificateImage
+          {/* <CertificateImage
             src="certificate1.jpg"
             alt="Certificat des partenaires"
           />
           <CertificateImage
             src="certificate2.jpg"
             alt="Document d'un partenaire vérifié"
-          />
+          /> */}
         </CertificateGallery>
       </Section>
 
@@ -195,13 +143,7 @@ const AboutUs: React.FC = () => {
           d'autres utilisateurs à trouver les meilleurs endroits pour l'échange
           d'or.
         </Paragraph>
-        <FeedbackForm onSubmit={handleSubmit}>
-          <Input type="text" placeholder="Votre nom" />
-          <Textarea rows={4} placeholder="Votre avis..." />
-          <SubmitButton type="submit" disabled={state.submitting}>
-            Envoyer l'avis
-          </SubmitButton>
-        </FeedbackForm>
+        <Feedback />
       </Section>
     </AboutUsContainer>
   );
