@@ -52,9 +52,9 @@ const InteractiveMap: React.FC = () => {
       </MapContainer>
       {activeLocation && (
         <div style={{ paddingTop: 20 }}>
-          <h2>Active Location Details</h2>
-          <p>Name: {activeLocation.name}</p>
-          <p>Address: {activeLocation.address}</p>
+          <h2>Détails de la localisation active</h2>
+          <p>Nom : {activeLocation.name}</p>
+          <p>Adresse : {activeLocation.address}</p>
         </div>
       )}
     </div>

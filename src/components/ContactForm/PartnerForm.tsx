@@ -4,21 +4,22 @@ import { Input, Button } from '@mui/material';
 import { Message, FormContainer, Title, Label } from './ContactForm.styled';
 
 const PartnerForm: React.FC = () => {
-  const [state, handleSubmit] = useForm('xzzbklnv'); // ID форми
+  const [state, handleSubmit] = useForm('mgverjbb'); // ID форми
 
   if (state.succeeded) {
     return (
       <Message success={state.succeeded ? "true" : "false"}>
-        Дякуємо за реєстрацію! Ми зв'яжемося з вами найближчим часом.
+        Merci pour votre inscription ! Nous vous contacterons dans les plus brefs délais.
       </Message>
     );
   }
 
   return (
     <FormContainer>
-      <Title>Форма реєстрації партнера</Title>
+      <Title>
+      Formulaire d'inscription pour partenaire</Title>
       <form onSubmit={handleSubmit}>
-        <Label htmlFor="name">Прізвище:</Label>
+        <Label htmlFor="name">Nom de famille :</Label>
         <Input type="text" id="name" name="name" required />
         <ValidationError prefix="Name" field="name" errors={state.errors} />
 
@@ -26,12 +27,12 @@ const PartnerForm: React.FC = () => {
         <Input type="email" id="email" name="email" required />
         <ValidationError prefix="Email" field="email" errors={state.errors} />
 
-        <Label htmlFor="phone">Телефон:</Label>
+        <Label htmlFor="phone">Téléphone :</Label>
         <Input type="tel" id="phone" name="phone" required />
         <ValidationError prefix="Phone" field="phone" errors={state.errors} />
 
         <Button type="submit" disabled={state.submitting}>
-          Відправити
+        Envoyer
         </Button>
       </form>
 

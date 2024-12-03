@@ -68,8 +68,8 @@ const CitySearch: React.FC = () => {
        {selectedCity && (
         <CityItem>
           <h3>{selectedCity.city}</h3>
-          <p>Gold Price: {selectedCity.goldPrice}€/g</p>
-          <p>Silver Price: {selectedCity.silverPrice}€/g</p>
+          <p>Prix de l'or : {selectedCity.goldPrice}€/g</p>
+          <p>Prix de l'argent :{selectedCity.silverPrice}€/g</p>
         </CityItem>
       )}
     </SearchContainer>

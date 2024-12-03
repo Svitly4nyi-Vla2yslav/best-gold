@@ -20,28 +20,30 @@ const Header: React.FC = () => {
         to="/"
         className="animate__delay-1s animate__animated animate__fadeInDown"
       >
-        GoldBuy
+        PartenaireBijoux
       </Logo>
       <NavList>
         {isMobile ? (
           <MobileMenu />
         ) : (
-          <><Fade direction='down' cascade>
-            <NavItem >
-              <StyledNavLink to="/home">Home</StyledNavLink>
-            </NavItem>
-            <NavItem>
-              <StyledNavLink to="/details">Details</StyledNavLink>
-            </NavItem>
-            <NavItem>
-              <StyledNavLink to="/about">About</StyledNavLink>
-            </NavItem>
-            <NavItem>
-              <StyledNavLink to="/partners">Partners</StyledNavLink>
-            </NavItem>
-            <NavItem>
-              <StyledNavLink to="/contact">Contact</StyledNavLink>
-            </NavItem></Fade>
+          <>
+            <Fade direction="down" cascade>
+              <NavItem>
+                <StyledNavLink to="/home">Accueil</StyledNavLink>
+              </NavItem>
+              <NavItem>
+                <StyledNavLink to="/details">Détails</StyledNavLink>
+              </NavItem>
+              <NavItem>
+                <StyledNavLink to="/about">À propos</StyledNavLink>
+              </NavItem>
+              <NavItem>
+                <StyledNavLink to="/partners">Partenaires</StyledNavLink>
+              </NavItem>
+              <NavItem>
+                <StyledNavLink to="/contact">Contact</StyledNavLink>
+              </NavItem>
+            </Fade>
           </>
         )}
       </NavList>

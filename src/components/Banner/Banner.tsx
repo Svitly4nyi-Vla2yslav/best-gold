@@ -6,9 +6,9 @@ import { Zoom } from 'react-awesome-reveal';
 
 const Banner: React.FC = () => {
   return (
-    <Zoom direction="down" duration={3000}>
+    <Zoom direction="down" duration={1000}>
       <BannerContainer>
-        <BannerText>Sell your gold today at the best price!</BannerText>
+        <BannerText>Vendez votre or aujourd'hui au meilleur prix !</BannerText>
         <ImageBanner src={goldBanner} />
       </BannerContainer>
     </Zoom>
