@@ -1,6 +1,9 @@
 import React from 'react';
 import { Fade } from 'react-awesome-reveal'; // для анімацій
+
 import Gold from '../../assets/image/gold-rope-chain-cost.jpg';
+import coins from "../../assets/image/gold-header-300x160.jpg"
+
 import { Button } from '../ContactForm/ContactForm.styled';
 import { Link } from 'react-scroll';
 import {
@@ -12,6 +15,7 @@ import {
   Image,
   ListItem,
   Item,
+  Container,
 } from './HeroComponent.styled';
 
 const HeroComponent: React.FC = () => {
@@ -37,13 +41,14 @@ const HeroComponent: React.FC = () => {
         <Description>
           Nous vous aidons à déterminer la valeur de vos objets, quel que soit
           leur type. Cela peut inclure :
-        </Description>
+        </Description> <Container> <Image src={coins} />
         <ListItem>
           <Item>- Des bijoux avec différentes valeurs en carats ;</Item>
           <Item>- Des pièces en or et en argent ;</Item>
           <Item>- Des lingots de métaux précieux ;</Item>
           <Item>- D'autres objets composés de matériaux mixtes.</Item>
-        </ListItem>
+        </ListItem></Container>
+       
       </Fade>
       <Fade direction="up" delay={900} duration={1000}>
         <Description>

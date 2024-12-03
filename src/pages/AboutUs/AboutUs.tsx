@@ -1,56 +1,15 @@
 import React from 'react';
-import styled from 'styled-components';
 import InteractiveMap from '../../components/InteractiveMap/InteractiveMap';
 import Feedback from '../../components/ContactForm/Feedback';
-
-const AboutUsContainer = styled.div`
-  padding: 20px;
-  font-family: 'Arial', sans-serif;
-  color: #333;
-`;
-
-const Title = styled.h1`
-  color: #2c3e50;
-  margin-bottom: 20px;
-`;
-
-const Section = styled.section`
-  margin-bottom: 40px;
-`;
-
-const SectionTitle = styled.h2`
-  color: #2c3e50;
-  margin-bottom: 20px;
-`;
-
-const Paragraph = styled.p`
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 20px;
-`;
-
-const WhyUsList = styled.ul`
-  list-style: none;
-  padding-left: 0;
-`;
-
-const WhyUsItem = styled.li`
-  font-size: 16px;
-  margin-bottom: 10px;
-`;
-
-const StrongText = styled.strong`
-  color: #e67e22;
-`;
-
-const CertificateGallery = styled.div`
-  display: flex;
-  gap: 15px;
-`;
+import BannerAbout from '../../components/Banner/BannerAbout';
+import { AboutUsContainer, Section, Title, Paragraph, SectionTitle, WhyUsList, WhyUsItem, StrongText, CertificateGallery, CertificateImage } from './AboutUs.styled';
+import certificate1 from "../../assets/image/завантаження (1).jpg"
+import certificate2 from "../../assets/image/завантаження.jpg"
 
 const AboutUs: React.FC = () => {
   return (
     <AboutUsContainer>
+      <BannerAbout/>
       <Section className="intro">
         <Title>À propos de nous</Title>
         <Paragraph>
@@ -124,14 +83,14 @@ const AboutUs: React.FC = () => {
           réception de l'or.
         </Paragraph>
         <CertificateGallery>
-          {/* <CertificateImage
-            src="certificate1.jpg"
+          <CertificateImage
+            src={certificate1}
             alt="Certificat des partenaires"
           />
           <CertificateImage
-            src="certificate2.jpg"
+            src={certificate2}
             alt="Document d'un partenaire vérifié"
-          /> */}
+          />
         </CertificateGallery>
       </Section>
 

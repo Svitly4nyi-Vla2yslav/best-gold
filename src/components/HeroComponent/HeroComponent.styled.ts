@@ -8,13 +8,15 @@ export const MainSection = styled.section`
 `;
 
 export const Title = styled.h2`
+font-family: "Formular", sans-serif;
   color: #2a2a2a;
   font-size: 2rem;
-  font-family: 'Georgia', serif;
+  // font-family: 'Georgia', serif;
   padding-bottom: 40px;
 `;
 
 export const Description = styled.p`
+font-family: "Formular", sans-serif;
   color: #444;
   font-size: 1.2rem;
   line-height: 1.5;
@@ -45,6 +47,7 @@ export const ListItem = styled.ul`
 `;
 
 export const Item = styled.li`
+font-family: "Formular", sans-serif;
   color: #444;
   font-size: 1.2rem;
   line-height: 1;
@@ -52,3 +55,16 @@ export const Item = styled.li`
  text-align: start;
  padding-left: 130px;
 `;
+
+export const Container = styled.div`
+display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+img {
+object-fit: cover;
+max-width: 200px;
+// padding: 10px;
+}
+`;
+

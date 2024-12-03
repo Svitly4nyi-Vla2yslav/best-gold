@@ -39,10 +39,32 @@ export const NavItem = styled.li`
     font-size: 1rem;
     transition: color 0.3s ease;
 
-    &:hover,
-    &.active {
-      color: silver;
+   &:hover {
+    color: silver;
+    transform: scale(1.1);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: silver;
+    transition: width 0.3s ease-in-out;
+  }
+
+  &.active {
+    color: silver;
+    &::after {
+      width: 100%;
     }
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
   }
 `;
 
@@ -53,7 +75,7 @@ export const StyledNavLink = styled(NavLink)`
   color: rgba(255, 255, 255, 0.8);
   transition: all 0.3s ease-in-out;
   position: relative;
-  
+
   &:hover {
     color: silver;
     transform: scale(1.1);

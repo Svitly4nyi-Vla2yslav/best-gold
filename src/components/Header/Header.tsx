@@ -10,9 +10,10 @@ import { useMediaQuery } from 'react-responsive';
 import { MobileMenu } from '../MobileMenu/MobileMenu';
 import 'animate.css';
 import { Fade } from 'react-awesome-reveal';
+import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 
 const Header: React.FC = () => {
-  const isMobile = useMediaQuery({ query: '(max-width: 549px)' });
+  const isMobile = useMediaQuery({ query: '(max-width: 1024px)' });
 
   return (
     <NavbarContainer>
@@ -22,6 +23,9 @@ const Header: React.FC = () => {
       >
         PartenaireBijoux
       </Logo>
+      <NavItem  className="animate__delay-2s animate__animated animate__fadeInDown">
+        <a href="mailto:example@email.com"><AlternateEmailIcon/> example@email.com</a>
+      </NavItem>
       <NavList>
         {isMobile ? (
           <MobileMenu />
@@ -31,9 +35,9 @@ const Header: React.FC = () => {
               <NavItem>
                 <StyledNavLink to="/home">Accueil</StyledNavLink>
               </NavItem>
-              <NavItem>
+              {/* <NavItem>
                 <StyledNavLink to="/details">Détails</StyledNavLink>
-              </NavItem>
+              </NavItem> */}
               <NavItem>
                 <StyledNavLink to="/about">À propos</StyledNavLink>
               </NavItem>

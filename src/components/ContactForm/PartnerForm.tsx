@@ -1,7 +1,6 @@
 import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
-import { Input, Button } from '@mui/material';
-import { Message, FormContainer, Title, Label } from './ContactForm.styled';
+import { Message, FormContainer, Title, Label, Input, Button } from './ContactForm.styled';
 
 const PartnerForm: React.FC = () => {
   const [state, handleSubmit] = useForm('mgverjbb'); // ID форми
