@@ -30,6 +30,7 @@
     "@vitejs/plugin-react-swc": "^3.3.2",
     "animate.css": "^4.1.1",
     "antd": "^5.16.4",
+    "aos": "^2.3.4",
     "cloudinary-core": "^2.13.1",
     "cloudinary-react": "^1.8.1",
     "cors": "^2.8.5",

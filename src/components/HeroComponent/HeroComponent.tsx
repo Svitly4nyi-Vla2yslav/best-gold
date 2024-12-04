@@ -18,14 +18,18 @@ import {
   Container,
 } from './HeroComponent.styled';
 
+
+
 const HeroComponent: React.FC = () => {
+
+
   return (
     <MainSection>
-      <Fade direction="up" delay={300} duration={1000}>
+      <>
         <Title>
           Votre partenaire fiable dans l'évaluation des métaux précieux
         </Title>
-      </Fade>
+      </>
       <Fade direction="up" delay={500} duration={1000}>
         <Description>
           Aujourd'hui, de nombreuses personnes en France recherchent des

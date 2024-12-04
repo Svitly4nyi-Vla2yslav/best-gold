@@ -25,7 +25,7 @@ const Header: React.FC = () => {
       </Logo> {isMobile! ? (<NavItem  className="animate__delay-2s animate__animated animate__fadeInDown">
         <a href="mailto:example@email.com"><EmailIcon/></a>
       </NavItem>) : (<NavItem  className="animate__delay-2s animate__animated animate__fadeInDown">
-        <a href="mailto:example@email.com"><EmailIcon/> example@email.com</a>
+        <a href="mailto:e.a.shakaryan@gmail.com"><EmailIcon/> e.a.shakaryan@gmail.com</a>
       </NavItem>) }
       
       <NavList>

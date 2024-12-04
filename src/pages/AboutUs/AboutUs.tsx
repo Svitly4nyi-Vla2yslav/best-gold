@@ -1,16 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import InteractiveMap from '../../components/InteractiveMap/InteractiveMap';
 import Feedback from '../../components/ContactForm/Feedback';
 import BannerAbout from '../../components/Banner/BannerAbout';
 import { AboutUsContainer, Section, Title, Paragraph, SectionTitle, WhyUsList, WhyUsItem, StrongText, CertificateGallery, CertificateImage } from './AboutUs.styled';
 import certificate1 from "../../assets/image/завантаження (1).jpg"
 import certificate2 from "../../assets/image/завантаження.jpg"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const AboutUs: React.FC = () => {
+
+  useEffect(() => {
+    AOS.init({ duration: 3000 });
+  }, []);
+
   return (
     <AboutUsContainer>
       <BannerAbout/>
-      <Section className="intro">
+      <Section className="intro"  data-aos="fade-right">
         <Title>À propos de nous</Title>
         <Paragraph>
           Notre site est un endroit où vous pouvez trouver des organisations
@@ -23,7 +30,7 @@ const AboutUs: React.FC = () => {
         </Paragraph>
       </Section>
 
-      <Section className="mission">
+      <Section className="mission"  data-aos="fade-left">
         <SectionTitle>Notre mission</SectionTitle>
         <Paragraph>
           Dans un monde où il existe une multitude d'offres sur le marché de la
@@ -37,7 +44,7 @@ const AboutUs: React.FC = () => {
         </Paragraph>
       </Section>
 
-      <Section className="why-us">
+      <Section className="why-us"  data-aos="fade-up-right">
         <SectionTitle>Pourquoi nous choisir ?</SectionTitle>
         <WhyUsList>
           <WhyUsItem>
@@ -63,7 +70,8 @@ const AboutUs: React.FC = () => {
         </WhyUsList>
       </Section>
 
-      <Section className="partners">
+      <Section className="partners"  data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom">
         <SectionTitle>Nos partenaires</SectionTitle>
         <Paragraph>
           Découvrez la carte de nos partenaires les plus proches pour la vente
@@ -75,7 +83,7 @@ const AboutUs: React.FC = () => {
         <InteractiveMap />
       </Section>
 
-      <Section className="certificates">
+      <Section className="certificates" >
         <SectionTitle>Documents et certificats</SectionTitle>
         <Paragraph>
           Découvrez les certificats de nos partenaires qui confirment leur
@@ -83,18 +91,18 @@ const AboutUs: React.FC = () => {
           réception de l'or.
         </Paragraph>
         <CertificateGallery>
-          <CertificateImage
+          <CertificateImage  data-aos="flip-left"
             src={certificate1}
             alt="Certificat des partenaires"
           />
-          <CertificateImage
+          <CertificateImage  data-aos="flip-right"
             src={certificate2}
             alt="Document d'un partenaire vérifié"
           />
         </CertificateGallery>
       </Section>
 
-      <Section className="feedback">
+      <Section className="feedback"  data-aos="flip-up">
         <SectionTitle>Laissez un avis</SectionTitle>
         <Paragraph>
           Nous serions ravis de connaître votre avis ! Si vous avez déjà utilisé
