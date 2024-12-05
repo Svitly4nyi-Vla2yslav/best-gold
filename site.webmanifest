@@ -1,0 +1,21 @@
+{
+    "name": "Prix de l'or",
+    "short_name": "PrixOr",
+    "start_url": "/home",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#ffd700",
+    "icons": [
+      {
+        "src": "./src/assets/image/logo2.jpg",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "./src/assets/image/LOGO-8.webp",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  
