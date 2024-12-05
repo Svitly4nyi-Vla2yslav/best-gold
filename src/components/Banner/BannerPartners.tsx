@@ -11,7 +11,7 @@ const BannerPartners: React.FC = () => {
   return (
     <Zoom direction="up" duration={1000}>
       <AboutContainerBanner>
-        <BannerTitel> Partners </BannerTitel>
+        <BannerTitel> Partenaires </BannerTitel>
         <ImageBanner src={partners}  />
       </AboutContainerBanner>
     </Zoom>

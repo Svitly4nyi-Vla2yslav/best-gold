@@ -62,6 +62,10 @@ display: flex;
     flex-wrap: nowrap;
     margin-bottom: 40px;
         flex-wrap: nowrap;
+@media(max-width: 1200px){
+display: block;
+}
+
 img {
 object-fit: cover;
 max-width: 200px;

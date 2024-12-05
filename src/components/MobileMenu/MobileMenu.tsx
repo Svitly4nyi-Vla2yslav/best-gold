@@ -8,10 +8,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import HandshakeIcon from '@mui/icons-material/Handshake';
-import InfoIcon from '@mui/icons-material/Info';
-// import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
-// import MailIcon from '@mui/icons-material/Mail';
 import HomeIcon from '@mui/icons-material/Home';
 import ContactIcon from '@mui/icons-material/ContactMail';
 import { Link } from 'react-router-dom';
@@ -42,7 +39,7 @@ export const MobileMenu: React.FC = () => {
 const links = [
     { to: '/home', text:'HOME', icon: <HomeIcon /> },
     { to: '/about', text: 'ABOUT US', icon: <InboxIcon /> },
-    { to: '/details', text: 'DETAILS', icon: <InfoIcon /> },
+ 
     { to: '/partners', text: 'PARTNERS', icon: <HandshakeIcon /> },
     { to: '/contact', text: 'CONTACT', icon: <ContactIcon /> },
 ]

@@ -21,7 +21,7 @@ const Header: React.FC = () => {
         to="/"
         className="animate__delay-1s animate__animated animate__fadeInDown"
       >
-        Partenaire<br/>Bijoux
+        Prix de l'or
       </Logo> {isMobile! ? (<NavItem  className="animate__delay-2s animate__animated animate__fadeInDown">
         <a href="mailto:example@email.com"><EmailIcon/></a>
       </NavItem>) : (<NavItem  className="animate__delay-2s animate__animated animate__fadeInDown">
