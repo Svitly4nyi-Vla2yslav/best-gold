@@ -1,0 +1,8 @@
+User-agent: *
+
+Allow: /
+
+
+
+# Вказівка на карту сайту
+Sitemap: https://change-cold.netlify.app/sitemap.xml
