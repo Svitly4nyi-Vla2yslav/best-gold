@@ -9,7 +9,7 @@ import { metalPrices } from './goldPrices';
 
 const PriceTable: React.FC = () => {
   return (
-    <Table>
+    <Table  data-aos="flip-right">
       <thead>
         <TableRow>
           <TableHeader>Métal</TableHeader>

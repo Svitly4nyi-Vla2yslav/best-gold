@@ -11,7 +11,6 @@ export const Title = styled.h2`
 font-family: "Formular", sans-serif;
   color: #2a2a2a;
   font-size: 2rem;
-  // font-family: 'Georgia', serif;
   padding-bottom: 40px;
 `;
 
@@ -61,6 +60,8 @@ display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-wrap: nowrap;
+    margin-bottom: 40px;
+        flex-wrap: nowrap;
 img {
 object-fit: cover;
 max-width: 200px;

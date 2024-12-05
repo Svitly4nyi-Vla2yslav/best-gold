@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Fade } from 'react-awesome-reveal'; // для анімацій
 
 import Gold from '../../assets/image/gold-rope-chain-cost.jpg';
@@ -17,12 +17,17 @@ import {
   Item,
   Container,
 } from './HeroComponent.styled';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useMediaQuery } from 'react-responsive';
 
 
 const HeroComponent: React.FC = () => {
+  useEffect(() => {
+    AOS.init({ duration: 3000 });
+  }, []);
 
-
+  const isMobile = useMediaQuery({ query: '(max-width: 824px)' });
   return (
     <MainSection>
       <>
@@ -45,7 +50,7 @@ const HeroComponent: React.FC = () => {
         <Description>
           Nous vous aidons à déterminer la valeur de vos objets, quel que soit
           leur type. Cela peut inclure :
-        </Description> <Container> <Image src={coins} />
+        </Description> <Container>{isMobile ? undefined :  <Image src={coins} />} 
         <ListItem>
           <Item>- Des bijoux avec différentes valeurs en carats ;</Item>
           <Item>- Des pièces en or et en argent ;</Item>

@@ -8,10 +8,12 @@ export const AboutUsContainer = styled.div`
    
 `;
 
-export const Title = styled.h1`
+export const Title = styled.h2`
 font-family: "Formular", sans-serif;
+font-size: 2rem;
   color: #2c3e50;
   margin-bottom: 20px;
+  text-align: center;
 `;
 
 export const Section = styled.section`
@@ -29,9 +31,13 @@ font-family: "Formular", sans-serif;
 `;
 
 export const Paragraph = styled.p`
+font-family: "Formular", sans-serif;
+
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 20px;
+   font-size: 1.2rem;
+  line-height: 1.5;
 `;
 
 export const WhyUsList = styled.ul`
