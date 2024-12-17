@@ -19,4 +19,4 @@
     { city: 'Angers', goldPrice: 45.4, silverPrice: 1.26 },
     { city: 'Nîmes', goldPrice: 44.5, silverPrice: 1.19 },
     { city: 'Villeurbanne', goldPrice: 45.9, silverPrice: 1.28 },
-  ];
+  ]; 
