@@ -22,6 +22,7 @@ display: flex;
     align-items: baseline;
     align-content: flex-start;
     flex-wrap: wrap;
+    display: none
     }
 `;
 

@@ -1,4 +1,8 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+// import { keyframes } from "@emotion/react";
+
+
+
 
 export const AboutContainerBanner = styled.div`
 margin : 10px auto 70px auto ;
@@ -73,6 +77,71 @@ display: flex;
   }
 `;
 
+export const BannerContainerHero = styled.div`
+  margin: 50px auto;
+  text-align: center;
+  background: linear-gradient(115deg, #ffcc00, #684209);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  justify-content: space-between;
+  position: relative;  /* Для того, щоб таблиця була відносно цього контейнера */
+.price-table-container {
+  max-width: 100%;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+ @media (max-width: 1024px) {
+height: 60vh;
+
+ img {
+   display: none;
+  }
+
+  }
+
+
+  @media (min-width: 1025px) {
+    display: flex;
+    text-align: center;
+    background: linear-gradient(115deg, #ffcc00, #684209);
+    color: #fff;
+    margin: 40px auto 80px auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    width: 100%;
+
+ img {
+    object-fit: cover;
+       width: 70vh;
+       height: 100%;
+  }
+ 
+`;
+
+// Стиль для таблиці в банері
+export const TableContainer = styled.div`
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden; /* Щоб таблиця не виходила за межі контейнера */
+  height: 200px;  /* Встановлюємо висоту банера, щоб таблиця не виходила */
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  animation: slideDown 10s infinite; /* Анімація слайду */
+`;
+
+
+
+// Анімація слайду таблиці вниз
+
+
+
 export const BannerText = styled.h1`
  font-family: "Formular", sans-serif;
     display: flex;
@@ -124,4 +193,15 @@ width: 100%;
 object-fit: cover;
  margin: 0 auto;
 }
+`;
+
+export const slideUp = keyframes`
+  0% {
+    transform: translateY(100%); /* Починаємо знизу */
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0); /* Піднімаємось вгору */
+    opacity: 1;
+  }
 `;

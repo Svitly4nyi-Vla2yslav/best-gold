@@ -1,60 +1,86 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
-export const Table = styled.table`
-
-  width: 60%;
-  margin: 1rem auto;
-  border-collapse: collapse;
-  // height: 70%;
+// Ключова анімація для плавного руху вгору
+const scrollAnimation = keyframes`
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%); /* Повний підйом таблиці */
+  }
 `;
 
-export const TableRow = styled.tr`
-  // &:nth-child(even) {
-  //   background-color: #f9f9f9;
-  // }
-
-  transition: all 0.3s ease-in-out;
-  position: relative;
+export const TableContainer = styled.div`
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 100%;
+  overflow: hidden;
   
-  &:hover {
-    // color: #00d1ff;
-    transform: scale(1.1);
-     background-color: #53fa00f0;
-  }
+  position: relative;
 
-  &::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 0;
-    height: 2px;
-    background-color: #00d1ff;
-    transition: width 0.3s ease-in-out;
-  }
-
-  &.active {
-    color: #00d1ff;
-    &::after {
-      width: 100%;
-    }
-  }
-
-  &:hover::after {
-    width: 100%;
+  & > div {
+    animation: ${scrollAnimation} 50s linear infinite; /* Плавна анімація */
   }
 `;
 
-export const TableCell = styled.td`
-  padding: 0.50rem;
+
+
+export const TableGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 рівні колонки */
+  width: 100%;
+  border-collapse: collapse;
+
+  & > div {
+    border: 1px solid #ddd;
+    padding: 10px;
+    position: static;
+  }
+`;
+
+export const TableRow = styled.div`
+  display: contents;
+// animation: ${scrollAnimation} 10s linear infinite;
+  & > div {
+    transition: transform 0.5s ease, background-color 0.5s ease;
+  }
+
+  &:hover > div {
+    background-color: #53fa00f0;
+    transform: scale(1.05); /* Масштабування комірок */
+  }
+`;
+export const TableHeaderRow = styled.div`
+  display: contents;
+
+  & > div {
+    position: sticky; /* Закріплення заголовка */
+    top: 0;           /* Завжди закріплюється у верхній частині контейнера */
+    background-color: #01283c; /* Колір фону */
+    color: #fff;     /* Колір тексту */
+    font-weight: bold;
+    z-index: 10;     /* Поверх інших елементів */
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+`;
+export const TableCell = styled.div`
+  flex: 1;
+  padding: 0.5rem;
   text-align: center;
   border: 1px solid #ddd;
   font-size: 13px;
 `;
 
-export const TableHeader = styled.th`
-  padding: 0.50rem;
-  background-color: #333;
-  color: #fff;
+export const AnimatedCell = styled.div`
+  padding: 0.5rem;
   text-align: center;
+  border: 1px solid #ddd;
+  font-size: 13px;
+  flex: 1; /* Однакова ширина для всіх клітинок */
+
 `;
+ 
+

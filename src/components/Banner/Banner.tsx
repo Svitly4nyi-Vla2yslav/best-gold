@@ -1,17 +1,30 @@
-import React from 'react';
-import { BannerContainer, BannerText, ImageBanner } from './Banner.styled';
+import React, { useEffect, useRef } from 'react';
+import { BannerContainerHero, ImageBanner } from './Banner.styled';
 import goldBanner from '../../assets/image/Slide_Goldmix.webp';
 import 'animate.css';
-import { Zoom } from 'react-awesome-reveal';
+// import { Zoom } from 'react-awesome-reveal';
+import PriceTable from '../GoldPriceTable/GoldPriceTable';
 
 const Banner: React.FC = () => {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (scrollRef.current) {
+      const clone = scrollRef.current.cloneNode(true);
+      scrollRef.current.appendChild(clone);
+    }
+  }, []);
+
   return (
-    <Zoom direction="down" duration={1000}>
-      <BannerContainer>
-        <BannerText>Vendez votre or aujourd'hui au meilleur prix !</BannerText>
-        <ImageBanner src={goldBanner} />
-      </BannerContainer>
-    </Zoom>
+    <>
+      <BannerContainerHero>
+        <ImageBanner src={goldBanner} />{' '}
+        <div className="price-table-container">
+          <PriceTable />
+          <PriceTable />
+        </div>
+      </BannerContainerHero>
+    </>
   );
 };
 

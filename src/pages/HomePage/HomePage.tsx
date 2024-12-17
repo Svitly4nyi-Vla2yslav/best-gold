@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import Banner from '../../components/Banner/Banner';
 import CitySelector from '../../components/CitySelector/CitySelector';
 import ClientForm from '../../components/ContactForm/ClientForm';
-import GoldPriceTable from '../../components/GoldPriceTable/GoldPriceTable';
+// import GoldPriceTable from '../../components/GoldPriceTable/GoldPriceTable';
 import HeroComponent from '../../components/HeroComponent/HeroComponent';
 import InteractiveMap from '../../components/InteractiveMap/InteractiveMap';
 import { Section, Title } from '../AboutUs/AboutUs.styled';
@@ -25,11 +25,11 @@ const Home: React.FC = () => {
   return (
     <HomeContainer>
       <main>
-        <Banner />
+        <Banner /><CitySelector />
         <MainWrapper>
           <TableContainer>
-            <CitySelector />
-            <GoldPriceTable />
+            
+            {/* <GoldPriceTable /> */}
           </TableContainer>
           <MapWrapper>
             <HeroComponent />
