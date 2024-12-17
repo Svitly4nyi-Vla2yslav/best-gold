@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import PartnerForm from '../../components/ContactForm/PartnerForm';
-import { partners } from './dataPartners';
+import { partners } from '../../База_Даных/dataPartners';
 import {
   PageContainer,
   CardContainer,
