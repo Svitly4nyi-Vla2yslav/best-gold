@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import { locations } from './locations';
+import { locations } from '../../База_Даных/locations';
 
 const goldIcon = new L.Icon({
   iconUrl:

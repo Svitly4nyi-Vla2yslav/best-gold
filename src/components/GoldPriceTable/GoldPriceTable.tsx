@@ -6,7 +6,7 @@ import {
   AnimatedCell,
   TableHeaderRow,
 } from './GoldPriceTable.styled';
-import { metalPrices } from './goldPrices';
+import { metalPrices } from '../../База_Даных/goldPrices';
 
 const PriceTable: React.FC = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -41,7 +41,7 @@ const PriceTable: React.FC = () => {
 
           //  </div>
         ))}
-        
+
       </TableGrid>
     </TableContainer>
   );
