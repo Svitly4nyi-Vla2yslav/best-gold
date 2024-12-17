@@ -1,13 +1,13 @@
-import logo1 from "../../assets/image/LOGO-8.webp";
-import logo2 from "../../assets/image/logo1.jpg";
-import logo3 from "../../assets/image/logo2.jpg";
-import logo4 from "../../assets/image/logo3.jpg";
-import logo5 from "../../assets/image/logo4.jpg";
-import logo6 from "../../assets/image/logo5.jpg";
-import logo7 from "../../assets/image/logo6.jpg";
-import logo8 from "../../assets/image/logo7.jpg";
-import logo9 from "../../assets/image/logo9.jpg";
-import logo10 from "../../assets/image/logo10.jpg";
+import logo1 from "../assets/image/LOGO-8.webp";
+import logo2 from "../assets/image/logo1.jpg";
+import logo3 from "../assets/image/logo2.jpg";
+import logo4 from "../assets/image/logo3.jpg";
+import logo5 from "../assets/image/logo4.jpg";
+import logo6 from "../assets/image/logo5.jpg";
+import logo7 from "../assets/image/logo6.jpg";
+import logo8 from "../assets/image/logo7.jpg";
+import logo9 from "../assets/image/logo9.jpg";
+import logo10 from "../assets/image/logo10.jpg";
 
 export const partners = [
     {
