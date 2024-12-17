@@ -1855,7 +1855,7 @@ object-fit: cover;
   position: relative;
 
   & > div {
-    animation: ${wS} 50s linear infinite; /* Плавна анімація */
+    animation: ${wS} 100s linear infinite; /* Плавна анімація */
   }
 `,Iz=ee.div`
   display: grid;
