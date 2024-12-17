@@ -1,9 +1,14 @@
 import React, { useEffect, useRef } from 'react';
-import { TableContainer, TableGrid, TableRow, AnimatedCell, TableHeaderRow } from './GoldPriceTable.styled';
+import {
+  TableContainer,
+  TableGrid,
+  TableRow,
+  AnimatedCell,
+  TableHeaderRow,
+} from './GoldPriceTable.styled';
 import { metalPrices } from './goldPrices';
 
 const PriceTable: React.FC = () => {
-
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -28,9 +33,15 @@ const PriceTable: React.FC = () => {
             <AnimatedCell>{item.carat}</AnimatedCell>
             <AnimatedCell>{item.type}</AnimatedCell>
             <AnimatedCell>{item.prix}</AnimatedCell>
+            <AnimatedCell style={{backgroundColor: "gold"}}>Métal</AnimatedCell>
+            <AnimatedCell style={{backgroundColor: "gold"}}>Carat</AnimatedCell>
+            <AnimatedCell style={{backgroundColor: "gold"}}>Type</AnimatedCell>
+            <AnimatedCell style={{backgroundColor: "gold"}}>Prix</AnimatedCell>
           </TableRow>
+
           //  </div>
         ))}
+        
       </TableGrid>
     </TableContainer>
   );
