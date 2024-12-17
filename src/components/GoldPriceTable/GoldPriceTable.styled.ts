@@ -20,7 +20,7 @@ export const TableContainer = styled.div`
   position: relative;
 
   & > div {
-    animation: ${scrollAnimation} 100s linear infinite; /* Плавна анімація */
+    animation: ${scrollAnimation} 80s linear infinite; /* Плавна анімація */
   }
 `;
 
