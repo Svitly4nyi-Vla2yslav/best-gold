@@ -2,7 +2,6 @@ import { css } from '@emotion/react';
 import 'modern-normalize';
 import Grotesk from "./assets/fonts/RightGrotesk-CompactBlack.ttf";
 import BiroScript from "./assets/fonts/BiroScriptPlus-Bold.ttf";
-import Messina from "./assets/fonts/MessinaSansMono-Black.ttf";
 import Formular from "./assets/fonts/Formular-Medium.ttf";
 import Roboto from "./assets/fonts/Roboto-Regular.ttf";
 import Proxima from "./assets/fonts/d9fe41ee-4904-4a11-ba11-b61cd3be767f.woff2";
@@ -10,7 +9,7 @@ import Proxima from "./assets/fonts/d9fe41ee-4904-4a11-ba11-b61cd3be767f.woff2";
 export const GlobalStyle = css`
   :root {
     --font-family: "Right Grotesk", sans-serif;
-    --second-family: "Messina Sans Mono", sans-serif;
+    --second-family: "Biro Script Plus", sans-serif;
     --third-family: "Biro Script Plus", sans-serif;
     --font3: "Formular", sans-serif;
     --font4: "Roboto", sans-serif;
@@ -30,11 +29,6 @@ export const GlobalStyle = css`
   @font-face {
     font-family: 'Right Grotesk';
     src: url(${Grotesk}) format('truetype');
-  }
-
-  @font-face {
-    font-family: 'Messina Sans Mono';
-    src: url(${Messina}) format('truetype');
   }
 
   @font-face {
@@ -129,7 +123,7 @@ export const GlobalStyle = css`
   h5,
   h6,
   p {
-    font-family: 'Messina Sans Mono';
+    font-family: 'Right Grotesk';
     margin: 0;
     padding: 0;
   }
